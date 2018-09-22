@@ -16,7 +16,7 @@ volatile unsigned long val = 0; // Variable for values from ADC
 volatile unsigned int count = 0; // Count of current measures
 
 double refactor(int adcVal){
-	return (double) (0.0488997555 * (adcVal - 512)); // Formula for conversion ADC to amperage
+	return (double) (0.0488997555 * (adcVal - ZERO)); // Formula for conversion ADC to amperage
 }
 
 void sendUART(char data){
@@ -138,6 +138,7 @@ int main(void) {
 			
 			//debugData();
 			
+			//sendInt(val/count);
 			sendInt((int)(1000*data));
 			val = 0;
 			count = 0;

@@ -12,7 +12,7 @@
 #define MAIN_H_
 
 /************************************************************************/
-/*       FREQUENCY FOR PROTEUS - 1 MGHZ, IN REAL LIFE - 16 MGHZ          */
+/*       FREQUENCY FOR PROTEUS - 1 MGHZ, IN REAL LIFE - 16 MGHZ         */
 /************************************************************************/
 
 #ifndef F_CPU
@@ -35,10 +35,11 @@
 #define pinRX PIND0
 #define pinTX PIND1
 /* UART speed config */
-#define BAUD 256000
+#define BAUD 9600
 #define BAUDRATE ((F_CPU)/(BAUD*16UL)-1)
 
-#define COUNT 1 // Count of measures
+#define COUNT 3 // Count of measures
+#define ZERO 511 // ADC when no load to ACS
 
 /* End macros */
 
